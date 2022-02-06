@@ -1,7 +1,9 @@
 import * as React from "react";
 import styled, { css } from "styled-components";
 import { darken, lighten } from "polished";
-export interface ButtonProps {}
+export interface ButtonProps {
+  children: string;
+}
 
 const StyledButton = styled.button`
   height: 100px;
@@ -23,5 +25,5 @@ const StyledButton = styled.button`
 `;
 
 export function Button(props: ButtonProps) {
-  return <StyledButton>ADD</StyledButton>;
+  return <StyledButton>{props.children}</StyledButton>;
 }
